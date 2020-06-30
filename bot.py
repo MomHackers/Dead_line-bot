@@ -1,27 +1,36 @@
-import vk_api
-from vk_api.longpoll import VkLongPoll, VkEventType
-from vk_api.utils import get_random_id
-from settings import TOKEN
-
-reply = "Я не понимаю, что ты там написал"  # TODO reply - Функция распознования текста сообщения
+import requests
+import bs4
 
 
-def main():
-    try:
-        vk_session = vk_api.VkApi(token=TOKEN)
-        vk = vk_session.get_api()
-        longpoll = VkLongPoll(vk_session)
+class VkBot:
 
-        for event in longpoll.listen():
-            if event.type == VkEventType.MESSAGE_NEW and event.to_me and event.from_user:
-                vk.messages.send(user_id=event.user_id, random_id=get_random_id(), message=reply)
-                user = vk.users.get(user_ids=event.user_id)[0]
-                # ТЕСТОВЫЙ ВЫВОД В КОНСОЛЬ:
-                print(str(event.text) + " FROM: " + user['first_name'] + ' ' + user['last_name'])
-    except Exception as e:
-        print("EXCEPTION: " + str(e))
-        main()
+    # TODO Интеграция с БД
+    def __init__(self, user_id):
+        self.USER_ID = user_id
+        self.USERNAME = self._get_user_name_from_vk_id(user_id)
+        self.COMMANDS = ["ПРИВЕТ", "РАСПИСАНИЕ", "ПОГОДА", "ПОКА"]  # TODO расширить
 
+    def _get_user_name_from_vk_id(self, user_id):
+        pass  # TODO Name from ID
 
-if __name__ == '__main__':
-    main()
+    def new_message(self, message):
+
+        # Привет
+        if message.upper() == self.COMMANDS[0]:
+            return f"Привет-привет, {self.USERNAME}!"  # Пример
+
+        # Расписание
+        elif message.upper() == self.COMMANDS[2]:
+            return self.get_shedule()  # TODO Интеграция с расписанием
+
+        # Погода
+        elif message.upper() == self.COMMANDS[1]:
+            return self.set_deadline()  # TODO Интеграция с базой данных дедлайнов
+            # пользователей и из РУЗа
+
+        # Пока
+        elif message.upper() == self.COMMANDS[3]:
+            return f"Пока-пока, {self.USERNAME}!"
+
+        else:
+            return "А вот тут я не поняла :/"

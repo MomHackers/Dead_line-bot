@@ -235,4 +235,4 @@ dmypy.json
 # End of https://www.toptal.com/developers/gitignore/api/python,pycharm
 
 # не палить токен
-settings.py
+config.py
