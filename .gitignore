@@ -236,3 +236,8 @@ dmypy.json
 
 # не палить токен
 config.py
+.idea/dead_bot.iml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml

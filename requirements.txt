@@ -1,3 +1,4 @@
 requests
-vk-api
-bs4 # Beautiful Soup 4 for web page parsing
+vkbottle
+loguru
+uvloop

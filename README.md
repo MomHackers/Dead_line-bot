@@ -4,8 +4,7 @@
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install project requirements.
-
+Построен на асинхронной библиотеке VKBottle. Зависимости:
 ```bash
 pip install requirements.txt
 ```
@@ -13,15 +12,15 @@ pip install requirements.txt
 ## Usage
 
 ```bash
-python vk-server.py
+python bot.py
 ```
 
 ## To-do list:
-- [ ] научить отвечать на текстовые сообщения
+- [ ] ответ на текстовые сообщения
 - [ ] дедлайны с базой данных
 - [ ] парсинг расписания с РУЗа
-- [ ] перемещение бота в беседу
-- [ ] оформить кнопочки для ответов 
+- [ ] работа бота в беседе
+- [ ] кнопочки для ответов 
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT Licensed by MumHackers](https://choosealicense.com/licenses/mit/)
