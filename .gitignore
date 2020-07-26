@@ -237,8 +237,10 @@ dmypy.json
 # не палить токен
 config.py
 .idea/dead_bot.iml
-.idea/inspectionProfiles/
+.idea/inspectionProfiles/*
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
-logs/
+logs/*
+.idea/Dead_line-bot.iml
+.idea/discord.xml
