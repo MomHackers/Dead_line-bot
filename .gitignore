@@ -245,3 +245,6 @@ logs/*
 .idea/Dead_line-bot.iml
 .idea/discord.xml
 logs/
+.idea/dataSources.xml
+!/config.py
+!/config.py

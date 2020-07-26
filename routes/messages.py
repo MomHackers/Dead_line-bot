@@ -19,7 +19,7 @@ async def wrapper(ans: Message):
     await ans("Расписание на ближайший день,\nменеджер дедлайнов и другое!", keyboard=menu.generate())
 
 
-@bp.on.message_handler(text="Создать дедлайн")
+@bp.on.message_handler(text="Расписание")
 async def wrapper(ans: Message):
     await ans("Расписание в разработке! =)")
 
