@@ -1,4 +1,4 @@
-requests
-vkbottle
-loguru
-uvloop
+vkbottle>=2.7.7
+loguru>=0.5.1
+uvloop>=0.14.0
+tortoise-orm>=0.16.14

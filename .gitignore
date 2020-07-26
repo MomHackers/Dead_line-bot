@@ -234,17 +234,20 @@ dmypy.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python,pycharm
 
-# не палить токен
-config.py
+# custom Pycharm IDE files
 .idea/dead_bot.iml
 .idea/inspectionProfiles/*
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
-logs/*
 .idea/Dead_line-bot.iml
 .idea/discord.xml
-logs/
 .idea/dataSources.xml
-!/config.py
-!/config.py
+
+
+# не палить токен
+config.py
+# мусор логов
+logs/
+logs/*
+
